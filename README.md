@@ -79,6 +79,7 @@ notifix("Custom is my middle name", {
 ```javascript
 notifix.closeAll();  // Close all notifications
 notifix.destroy();   // Remove everything including styles and containers
+```
 
 ## 🎨 Style Customization
 ```html
