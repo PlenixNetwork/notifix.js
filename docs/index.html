@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notifix.js Demo | Plenix Network</title>
+  <link rel="icon" type="image/x-icon" href="https://eu2.contabostorage.com/482fc34634ce4ff483611f20ae68a131:plenix-network/cdn/assets/images/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/gh/PlenixNetwork/notifix.js/dist/main.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col items-center py-10 px-4">
+
+  <h1 class="text-4xl font-bold mb-6 text-indigo-700">🎯 Notifix.js Live Demo</h1>
+  <p class="mb-10 text-center max-w-2xl text-lg text-gray-600">
+    Click on the buttons below to trigger different types of notifications using <strong>Notifix.js</strong>.<br>
+    You can customize the notifications based on type, position, duration, and more!
+  </p>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- 🎨 Multiple Types -->
+    <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix.success('Success! Everything went smoothly.')">
+      Success Notification
+    </button>
+    <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix.error('Oops! Something went wrong.')">
+      Error Notification
+    </button>
+    <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix.warning('Warning! Please be cautious.')">
+      Warning Notification
+    </button>
+    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix.info('FYI: This is an informational message.')">
+      Info Notification
+    </button>
+
+    <!-- 🧭 Position Examples -->
+    <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Notification at top-left', { position: 'top-left' })">
+      Top-Left Position
+    </button>
+    <button class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Notification at bottom-right', { position: 'bottom-right' })">
+      Bottom-Right Position
+    </button>
+
+    <!-- 🎞️ Animations -->
+    <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Slide-in from top', { animation: 'slide', position: 'top-center' })">
+      Slide-in Top Animation
+    </button>
+    <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Zoom-in effect!', { animation: 'zoom', position: 'bottom-center' })">
+      Zoom Animation
+    </button>
+
+    <!-- 🌗 Themes -->
+    <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Dark theme notification', { theme: 'dark' })">
+      Dark Theme Notification
+    </button>
+    <button class="bg-white text-gray-800 border border-gray-300 hover:bg-gray-100 px-4 py-2 rounded shadow"
+      onclick="notifix('Light theme notification', { theme: 'light' })">
+      Light Theme Notification
+    </button>
+
+    <!-- 📱 Responsive -->
+    <button class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Responsive notification example', { position: 'bottom-center', duration: 5000 })">
+      Responsive Notification
+    </button>
+
+    <!-- ⏳ Progress Bar -->
+    <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Notification with progress bar', { duration: 5000 })">
+      Progress Bar Notification
+    </button>
+
+    <!-- ⚙️ Customizable -->
+    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Customizable notification', { position: 'top-right', duration: 6000, closable: true })">
+      Customizable Notification
+    </button>
+
+    <!-- 🔁 Callbacks -->
+    <button class="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded shadow"
+      onclick="notifix('Notification with onClick callback', { onClick: () => alert('You clicked the notification!') })">
+      onClick Callback Notification
+    </button>
+
+  </div>
+
+  <!-- GitHub Button -->
+  <div class="mt-8">
+    <a href="https://github.com/PlenixNetwork/notifix.js" target="_blank">
+      <button class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg shadow-md">
+        View on GitHub
+      </button>
+    </a>
+  </div>
+
+  <footer class="mt-20 text-center text-sm text-gray-500">
+    © 2018 – <span id="year"></span> <a href="https://plenix.net" class="underline hover:text-indigo-700" target="_blank" rel="noopener">Plenix Network</a> — Built with 💡 Notifix.js
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
