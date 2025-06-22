@@ -19,6 +19,13 @@ Sick of dull, outdated notifications that feel like they belong in a Windows 95 
 
 ---
 
+## 👀 See Demo
+
+Check out the live demo of Notifix.js in action:  
+[Notifix.js Demo](https://plenixnetwork.github.io/notifix.js/)
+
+---
+
 ## 📦 Installation
 
 ### Global Script
