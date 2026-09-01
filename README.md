@@ -97,5 +97,8 @@ notifix.destroy();   // Remove everything including styles and containers
 }
 ```
 
+---
+
 ## 📄 License
-This project is licensed under the MIT License.
+
+This project is licensed under the **MIT License**.
